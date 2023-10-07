@@ -142,11 +142,19 @@ export function Avatar(){
 // if condition can return null;
 
 //&& operator is used assign right with left if true
+//{name}{isPacked && '✔'}
 
 function Item ({name,isPacked}) {
+  
+  let itemcontent = name; //let variable can reassign value
+
+  if(isPacked){itemcontent= name + "✔"} //&& "✔" is not worked
+  else{itemcontent = (<del>{name}</del>)}
+
+
   return(
     <li className="items">
-      {name}{isPacked && '✔'}
+      {itemcontent}
     </li>);
 }
 
