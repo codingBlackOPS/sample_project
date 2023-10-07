@@ -10,7 +10,7 @@ const Components = () => {
       <Image />
       <Aass />
       <Click />
-      
+      <Avatar />
     </>
   );
 };
@@ -115,6 +115,23 @@ export function Blackops () {
     <>
       <img src={item.image} alt="BlackOPS"></img>
     </>
+  );
+}
+
+function Gallery(){
+  return(
+    <img src='https://i.imgur.com/lICfvbD.jpg' alt="Profile Pic"></img>
+  );
+}
+
+export function Avatar(){
+  return(
+    <Gallery
+    
+    profile = {{name: 'SAM', imageID:'gh190'}}
+    size={100}
+    
+    />
   );
 }
 
