@@ -2,14 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Components, { Blackops } from './App';
+import Components from './App';
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-  < Components/>
-  <Blackops />
+    < Components />
   </React.StrictMode>
 );
 
