@@ -11,6 +11,7 @@ const Components = () => {
       <Aass />
       <Click />
       <Avatar />
+      <Packing />
     </>
   );
 };
@@ -129,10 +130,55 @@ export function Avatar(){
     <Gallery
     
     profile = {{name: 'SAM', imageID:'gh190'}}
-    size={100}
+    size={50}
     
     />
   );
 }
+
+// del tag used to strike out the word ! 
+//{isPacked ? (<del> { name + ' ✔'} </del>) :( name)}  
+
+// if condition can return null;
+
+//&& operator is used assign right with left if true
+
+function Item ({name,isPacked}) {
+  return(
+    <li className="items">
+      {name}{isPacked && '✔'}
+    </li>);
+}
+
+function Packing (){
+  return(
+    <>
+      <h4>Purchased Items</h4>
+      <ul>
+      <Item 
+      name="Fruits"
+      isPacked={true}/>
+
+      <Item 
+      name="Snacks"
+      isPacked={true}
+      />
+
+      <Item name="chocolates" isPacked={false}/>
+      </ul>
+      <button className="check" onClick={Item}>Check</button>
+    </>
+    
+  );
+}
+
+
+
+
+
+
+
+
+
 
 
