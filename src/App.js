@@ -1,4 +1,5 @@
 import React from "react";
+import { data} from "./detail";
 import { useState } from "react";
 
 const Components = () => {
@@ -12,6 +13,7 @@ const Components = () => {
       <Click />
       <Avatar />
       <Packing />
+      <List />
     </>
   );
 };
@@ -179,6 +181,19 @@ function Packing (){
     
   );
 }
+
+//Rendering Lists
+
+
+
+export function List () {
+   const uchiha = data.filter( detail => detail.clan === 'Uchiha');
+
+   return(<ul>
+    {uchiha}
+   </ul>);
+}
+
 
 
 
